@@ -13,24 +13,25 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 
 public class OkHTTPGetAllContactsTest {
-   String token =  "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoidHVsaXBAZ21haWwuY29tIiwiaXNzIjoiUmVndWxhaXQiLCJleHAiOjE2ODQ4NTc3NDksImlhdCI6MTY4NDI1Nzc0OX0.amH2Yd35qU1JuOqn_nR4FZG6pMjlImRpffGiULfiOcs";
+    String token = "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoiYWJjQGRlZi5jb20iLCJpc3MiOiJSZWd1bGFpdCIsImV4cCI6MTY4NTU2MDQxNiwiaWF0IjoxNjg0OTYwNDE2fQ._okxEEXBwsT-LKJ_29xk_uRY4JK9LTNCeMNj97gBIGk";
 
-Gson gson= new Gson();
-OkHttpClient client = new OkHttpClient();
-@Test
-public void getAllContacts() throws IOException {
-    Request request = new Request.Builder()
-            .url("https://contactapp-telran-backend.herokuapp.com/v1/contacts")
-            .addHeader("Authorization", token)
-            .build();
-    Response response = client.newCall(request).execute();
-    Assert.assertTrue(response.isSuccessful());
+    Gson gson = new Gson();
+    OkHttpClient client = new OkHttpClient();
 
-GetAllContactsDTO contacts = gson.fromJson(response.body().string(), GetAllContactsDTO.class);
-for(ContactDTO contact:contacts.getContacts()){
-    System.out.println(contact.getId());
-    System.out.println(contact.getEmail());
-    System.out.println("=======");
-}
-}
+    @Test
+    public void getAllContacts() throws IOException {
+        Request request = new Request.Builder()
+                .url("https://contactapp-telran-backend.herokuapp.com/v1/contacts")
+                .addHeader("Authorization", token)
+                .build();
+        Response response = client.newCall(request).execute();
+        Assert.assertTrue(response.isSuccessful());
+
+        GetAllContactsDTO contacts = gson.fromJson(response.body().string(), GetAllContactsDTO.class);
+        for (ContactDTO contact : contacts.getContacts()) {
+            System.out.println(contact.getId());
+            System.out.println(contact.getEmail());
+            System.out.println("=======");
+        }
+    }
 }

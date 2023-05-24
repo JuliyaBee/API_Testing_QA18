@@ -26,6 +26,11 @@ dependencies {
         implementation 'com.google.code.gson:gson:2.8.6'//библиотека помогает преобразовывать обьекты Java в Json
         implementation("com.squareup.okhttp3:okhttp:4.9.0")//позволяет отправлять команды на сервер в виде http запроса
 
+        implementation 'com.jayway.restassured:rest-assured:2.9.0'//умеет в рамках боди принимать джавовский объект
+
+        implementation "jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+        implementation "org.glassfish.jaxb:jaxb-runtime:2.3.2"
+
     }
 }
 

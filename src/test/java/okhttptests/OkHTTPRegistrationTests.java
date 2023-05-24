@@ -23,6 +23,7 @@ public class OkHTTPRegistrationTests {
                 .password("$Abcdef12345" + i)
                 .build();
         Gson gson = new Gson();
+
         OkHttpClient client = new OkHttpClient();
         RequestBody requestBody = RequestBody.create(gson.toJson(requestDTO), JSON);
         Request request = new Request.Builder()

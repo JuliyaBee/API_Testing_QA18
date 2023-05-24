@@ -13,7 +13,7 @@ import java.io.IOException;
 public class OkHTTPLoginTests {
     public static final MediaType JSON = MediaType.get("application/json;charset=utf-8");//константа для сопровождения запросов на сервер(получаем из Inspector (страницы в приложении)  Contact-Type
 
-    //eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoidHVsaXBAZ21haWwuY29tIiwiaXNzIjoiUmVndWxhaXQiLCJleHAiOjE2ODQ4NTc3NDksImlhdCI6MTY4NDI1Nzc0OX0.amH2Yd35qU1JuOqn_nR4FZG6pMjlImRpffGiULfiOcs
+   String token = "eyJhbGciOiJIUzI1NiJ9.eyJyb2xlcyI6WyJST0xFX1VTRVIiXSwic3ViIjoiYWJjQGRlZi5jb20iLCJpc3MiOiJSZWd1bGFpdCIsImV4cCI6MTY4NTU2MDQxNiwiaWF0IjoxNjg0OTYwNDE2fQ._okxEEXBwsT-LKJ_29xk_uRY4JK9LTNCeMNj97gBIGk";
     @Test
     public void loginTest() throws IOException {
         AuthRequestDTO requestDTO = AuthRequestDTO.builder()
@@ -41,7 +41,6 @@ public class OkHTTPLoginTests {
             System.out.println("Response code is " + response.code());
             ErrorDTO errorDTO = gson.fromJson(response.body().string(), ErrorDTO.class);
             System.out.println(errorDTO.getStatus() + "====="
-
                     + errorDTO.getMessage() + "====" + errorDTO.getError());
             Assert.assertFalse(response.isSuccessful());
         }

@@ -5,28 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="42663a0d-55bd-410d-b0c4-285eac5dec67" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/AddNewContactsDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/AuthRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/AuthResponseDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/ContactDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/ErrorDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dto/GetAllContactsDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/okhttptests/OkHTTPGetAllContactsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/okhttptests/OkHTTPLoginTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/okhttptests/OkHTTPRegistrationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dto/ContactDTOResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/okhttptests/OkHTTPAddNewContactTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/okhttptests/OkHTTPDeleteById.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/restAssured/RestAddNewContact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/restAssured/RestDeleteById.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/restAssured/RestGetAllContacts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/restAssured/RestLoginTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/restAssured/RestUpdateContact.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/okhttptests/OkHTTPGetAllContactsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/okhttptests/OkHTTPGetAllContactsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/okhttptests/OkHTTPLoginTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/okhttptests/OkHTTPLoginTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/okhttptests/OkHTTPRegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/okhttptests/OkHTTPRegistrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +28,26 @@
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
     </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="API_Testing_QA18" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -61,11 +72,12 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Gradle.OkHTTPRegistrationTests">
-    <configuration name="OkHTTPGetAllContactsTest.getAllContacts" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.RestGetAllContacts">
+    <configuration name="RestDeleteById" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -78,7 +90,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;okhttptests.OkHTTPGetAllContactsTest.getAllContacts&quot;" />
+            <option value="&quot;restAssured.RestDeleteById&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -88,7 +100,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OkHTTPRegistrationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RestDeleteById.deleteByIdNegative" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -101,7 +113,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;okhttptests.OkHTTPRegistrationTests&quot;" />
+            <option value="&quot;restAssured.RestDeleteById.deleteByIdNegative&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -111,7 +123,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OkHTTPRegistrationTests.registrationNegativeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RestGetAllContacts" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -124,7 +136,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;okhttptests.OkHTTPRegistrationTests.registrationNegativeTest&quot;" />
+            <option value="&quot;restAssured.RestGetAllContacts&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -134,7 +146,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OkHTTPRegistrationTests.registrationPositiveTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RestUpdateContact" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -147,7 +159,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;okhttptests.OkHTTPRegistrationTests.registrationPositiveTest&quot;" />
+            <option value="&quot;restAssured.RestUpdateContact&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -157,7 +169,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OkHTTPRegistrationTests.registrationTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="RestUpdateContact.updateContactTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -170,7 +182,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;okhttptests.OkHTTPRegistrationTests.registrationTest&quot;" />
+            <option value="&quot;restAssured.RestUpdateContact.updateContactTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -182,11 +194,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.OkHTTPRegistrationTests" />
-        <item itemvalue="Gradle.OkHTTPRegistrationTests.registrationPositiveTest" />
-        <item itemvalue="Gradle.OkHTTPRegistrationTests.registrationNegativeTest" />
-        <item itemvalue="Gradle.OkHTTPRegistrationTests.registrationTest" />
-        <item itemvalue="Gradle.OkHTTPGetAllContactsTest.getAllContacts" />
+        <item itemvalue="Gradle.RestGetAllContacts" />
+        <item itemvalue="Gradle.RestUpdateContact" />
+        <item itemvalue="Gradle.RestUpdateContact.updateContactTest" />
+        <item itemvalue="Gradle.RestDeleteById.deleteByIdNegative" />
+        <item itemvalue="Gradle.RestDeleteById" />
       </list>
     </recent_temporary>
   </component>
